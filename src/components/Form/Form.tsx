@@ -14,11 +14,11 @@ const Form = () => {
     const fileInputRef = useRef<HTMLInputElement>(null);
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const [data, setData] = useState<DetectionResult[] | null>(null);
-    const [error, setError] = useState<string | null>(null);
+    const [error, setError] = useState<string>('');
     const [loading, setLoading] = useState(false);
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
-    const [uploadStatus, setUploadStatus] = useState<string | null>(null);
-    const [imageSrc, setImageSrc] = useState<string | null>(null);
+    const [uploadStatus, setUploadStatus] = useState<string>('');
+    const [imageSrc, setImageSrc] = useState<string>('');
     const [showCanvas, setShowCanvas] = useState(false);
     const [focusedObject, setFocusedObject] = useState<number | null>(null);
     const [imageURL, setImageURL] = useState<string>('');
