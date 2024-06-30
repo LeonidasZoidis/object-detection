@@ -355,7 +355,7 @@ const Form = () => {
                     >
                         <input
                             type="text"
-                            value={imageURL ?? ''}
+                            value={imageURL ?? ''} // ensure value is always a string
                             onChange={(e) => setImageURL(e.target.value)}
                             placeholder="Enter image URL"
                             style={{
