@@ -21,7 +21,7 @@ const Form = () => {
     const [imageSrc, setImageSrc] = useState<string | null>(null);
     const [showCanvas, setShowCanvas] = useState(false);
     const [focusedObject, setFocusedObject] = useState<number | null>(null);
-    const [imageURL, setImageURL] = useState<string | null>(null);
+    const [imageURL, setImageURL] = useState<string>('');
     const [showURLInput, setShowURLInput] = useState(false);
 
     const handleUploadClick = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -356,7 +356,7 @@ const Form = () => {
                         {/*  */}
                         <input
                             type="text"
-                            value={imageURL ?? ''} // ensure value is always a string
+                            value={imageURL} // ensure value is always a string
                             onChange={(e) => setImageURL(e.target.value)}
                             placeholder="Enter image URL"
                             style={{
